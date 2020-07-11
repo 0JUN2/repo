@@ -1,3 +1,4 @@
+#/bin/sh
 yum groupinstall "Development Tools"
 yum install pcre pcre-devel
 yum install zlib zlib-devel
