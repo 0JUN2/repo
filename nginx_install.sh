@@ -1,8 +1,17 @@
 #/bin/sh
-yum groupinstall "Development Tools"
-yum install pcre pcre-devel
-yum install zlib zlib-devel
-yum install openssl openssl-devel
+
+# gcc install
+yum -y groupinstall "Development Tools"
+
+# pcre install
+yum -y install pcre pcre-devel
+
+# zlib install
+yum -y install zlib zlib-devel
+
+# OpenSSL install
+yum -y install openssl openssl-devel
+
 mkdir /home/src
 cd /home/src/
 wget http://nginx.org/download/nginx-1.18.0.tar.gz
