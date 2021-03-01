@@ -1,34 +1,13 @@
 pipeline {
-
-    agent any
-
-    tools { nodejs "nodejs12" }
-
     stages {
-
-        stage('Get build information') {
+        stage('pull') {
             steps {
-                sh 'echo $PATH'
-                sh 'node --version'
-                sh 'npm --version'
+                git credentialsId: 'YOUNGJUN_CHO', url: 'git@github.com:0JUN2/repo-install.git'
             }
         }
-
-        stage('Install dependencies') {
+		stage('test') {
             steps {
-                sh 'npm install'
-            }
-        }
-
-        stage('Test') {
-            steps {
-               sh 'npm test'
-            }
-        }
-
-        stage('Build') {
-            steps {
-                sh 'npm run build'
+                echo 'hello pipeline'
             }
         }
     }
