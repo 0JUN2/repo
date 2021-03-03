@@ -1,7 +1,5 @@
 #!/bin/sh
 
-## Author NHN Godo DevOps-YoungJun Jo. 
-
 ## function
 function apacheLog() {
 cat $log_path | grep $year:00:  | echo "00:00 ~ 00:59 :" `awk '{sum += $10} END {print sum/1024000,"MByte"}'`
@@ -100,4 +98,3 @@ then
 else
    echo "invalid value script end"
 fi
-
