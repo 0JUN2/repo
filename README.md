@@ -1,4 +1,13 @@
 # devops
-- ci/cd pipeline
-- ansible
-  - vagrant
+- docker
+  - docker compose
+  - dockerfile
+  - jenkins
+
+
+- vagrant
+  - ansible
+
+- script
+  - bash
+  - python
