@@ -1,4 +1,5 @@
-# repo
-# jenkins pipeline
-# ansible
-# vagrantfile
+# devops
+- ci/cd pipeline
+- ansible
+- docker
+- aws
