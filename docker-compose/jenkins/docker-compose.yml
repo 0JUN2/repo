@@ -1,0 +1,13 @@
+version: '3'
+services:
+  jenkins:
+    container_name: 'jenkins'
+    image: 'jenkins/jenkins:latest'
+    restart: always
+    ports:
+      - 19800:8080
+      - 19801:50000
+    volumes:
+      - ./jenkins:/var/jenkins_home
+    environment:
+      TZ: "Asiz/Seoul"
