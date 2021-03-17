@@ -1,0 +1,7 @@
+- name: check user line (2021-03-04) 
+  hosts: all
+  become: yes
+  become_method: su
+  tasks:
+    - shell: rsync -avh serverip::web_backup/ansible_deploy/check_user/check_user.sh /home/godosystem/tmp/
+    - shell: /home/godosystem/tmp/check_user.sh

@@ -1,0 +1,8 @@
+- name: add mq file (2021-03-04) 
+  hosts: all
+  become: yes
+  become_method: su
+  tasks:
+    - shell: rsync -avh serverip::web_backup/ansible_deploy/add_mq_file/add_mq_file.sh /home/godosystem/tmp/
+    - shell: rsync -avh serverip::web_backup/ansible_deploy/add_mq_file/mq.php /home/godosystem/tmp/
+    - shell: /home/godosystem/tmp/add_mq_file.sh

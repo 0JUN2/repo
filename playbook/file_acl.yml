@@ -1,0 +1,7 @@
+- name: add rx access to rental accout (2021-02-19)
+  hosts: all
+  become: yes
+  become_method: su
+  tasks:
+    - shell: rsync -avh serverip::web_backup/ansible_deploy/file_acl/add_rx_rental.sh /home/godosystem/tmp/
+    - shell: /home/godosystem/tmp/add_rx_rental.sh
