@@ -1,0 +1,11 @@
+---
+- hosts: vm1
+  become: true
+  vars:
+    file_destination: /home/vagrant
+  tasks:
+  - name: copy index.html
+    copy:
+      src: /home/vagrant/ansible/index.html
+      dest: "{{ file_destination }}"
+      mode: 0644
